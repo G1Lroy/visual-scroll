@@ -1,0 +1,56 @@
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.app {
+  margin: 0 auto;
+  min-width: calc(1440px - 2rem);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.virtual_scroll {
+  background-color: antiquewhite;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+.table_cell {
+  color: black;
+  border: 1px solid rgb(197, 197, 197);
+  box-sizing: border-box;
+  width: 200px;
+  padding: 0 10px;
+}
+
+.table_preview {
+  color: white;
+}
+
+.table_preview th,
+.table_preview td {
+  border: 1px solid grey;
+}
+
+.table_preview td {
+  color: lightgreen
+}
+
+.table_controls td {
+  padding: 10px;
+}
+
+.table_controls input,
+.table_controls select {
+  width: 80%;
+}
