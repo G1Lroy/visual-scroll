@@ -44,7 +44,7 @@ const VirtualScroll = ({ rowHeight, tableData, visibleRows }: VirtualScrollProps
               style={{ height: rowHeight }}
               key={start + rowIndex}
             >{row.map((text, colIndex) => (
-              <td className='table_cell' key={start + '' + rowIndex + colIndex}>{text}</td>
+              <td className='table_cell' key={start + '' + rowIndex + colIndex}>{text + 1}</td>
             ))}</tr>
           ))}
         </tbody>

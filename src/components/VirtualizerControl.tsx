@@ -15,8 +15,8 @@ const VirtualizerControl = ({ onChangeHandler, state }: VirtualizerControlProps)
           <tr >
             <th>Row height</th>
             <th>Visible rows</th>
-            <th>Table width</th>
-            <th>Table height</th>
+            <th>Table columns</th>
+            <th>Table rows</th>
           </tr>
         </thead>
         <tbody className='table_controls'>
@@ -24,7 +24,7 @@ const VirtualizerControl = ({ onChangeHandler, state }: VirtualizerControlProps)
             <td>{rowHeight} px</td>
             <td>{visibleRows}</td>
             <td>{w}</td>
-            <td>{h - 1}</td>
+            <td>{h}</td>
           </tr>
           <tr>
             <td>

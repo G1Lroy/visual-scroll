@@ -16,7 +16,7 @@ function App() {
     rowHeight: 35,
     visibleRows: 10,
     w: 5,
-    h: 5001
+    h: 5000
   })
 
   const onChangeHandler = useCallback((data: number, optionName: string) => {
