@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { memo, useEffect, useRef } from 'react'
 
 interface VirtualScrollProps {
   tableData: number[][]
@@ -35,7 +35,11 @@ const VirtualScroll = ({ rowHeight, tableData, visibleRows }: VirtualScrollProps
   }, [rowHeight, tableData.length, visibleRows]);
 
   return (
-    <div className='virtual_scroll' style={{ height: rowHeight * visibleRows + 1, overflow: 'auto' }} ref={virtualRootRef}>
+    <div
+      className='virtual_scroll'
+      style={{ height: rowHeight * visibleRows + 1, overflow: 'auto' }}
+      ref={virtualRootRef}
+    >
       <div style={{ height: getTopHeight() }} />
       <table>
         <tbody>
@@ -44,7 +48,10 @@ const VirtualScroll = ({ rowHeight, tableData, visibleRows }: VirtualScrollProps
               style={{ height: rowHeight }}
               key={start + rowIndex}
             >{row.map((text, colIndex) => (
-              <td className='table_cell' key={start + '' + rowIndex + colIndex}>{text + 1}</td>
+              <td
+                className='table_cell'
+                key={start + '' + rowIndex + colIndex}>{text + 1}
+              </td>
             ))}</tr>
           ))}
         </tbody>
@@ -53,4 +60,4 @@ const VirtualScroll = ({ rowHeight, tableData, visibleRows }: VirtualScrollProps
     </div>
   )
 }
-export default VirtualScroll
+export default memo(VirtualScroll) 

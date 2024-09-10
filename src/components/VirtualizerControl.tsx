@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { OptionsState } from '../App'
 
 interface VirtualizerControlProps {
@@ -75,4 +76,4 @@ const VirtualizerControl = ({ onChangeHandler, state }: VirtualizerControlProps)
   )
 }
 
-export default VirtualizerControl
+export default memo(VirtualizerControl)
